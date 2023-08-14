@@ -1,12 +1,12 @@
 import React from 'react';
 import RegisterForm from '../components/RegisterForm';
-
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import '../styles.css';
 function RegisterPage({ onRegister }) {
     return (
       <div>
-        <h1>Register Page</h1>
-        <h2>Seller Registration</h2>
         <RegisterForm onRegister={onRegister} userType="seller" />
+        <Link to="/seller/login">Already a user? Login</Link>
       </div>
     );
   }

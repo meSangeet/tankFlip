@@ -12,7 +12,7 @@ function RegisterForm({ onRegister, userType }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2>Register</h2>
+      <h1>Register</h1>
       <input
         type="email"
         placeholder="Email"

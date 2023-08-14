@@ -23,31 +23,13 @@ function App() {
 
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/buyer/login">Buyer Login</Link>
-            </li>
-            <li>
-              <Link to="/seller/login">Seller Login</Link>
-            </li>
-            <li>
-              <Link to="/buyer/register">Buyer Register</Link>
-            </li>
-            <li>
-              <Link to="/seller/register">Seller Register</Link>
-            </li>
-          </ul>
-        </nav>
-
         <Routes>
-          <Route path="/buyer/login" element={<BuyerLoginPage onLogin={handleLogin} />} />
+          <Route path="/" element={<BuyerLoginPage onLogin={handleLogin} />} />
           <Route path="/seller/login" element={<SellerLoginPage onLogin={handleLogin} />} />
           <Route path="/buyer/register" element={<BuyerRegisterPage onRegister={handleRegister} />} />
           <Route path="/seller/register" element={<SellerRegisterPage onRegister={handleRegister} />} />
         </Routes>
-
+        
         {loggedInUser && userType === 'buyer' && (
           <div>
             <h2>Welcome, Buyer {loggedInUser}!</h2>
@@ -61,7 +43,6 @@ function App() {
             {/* Display seller-specific content */}
           </div>
         )}
-      </div>
     </Router>
   );
 }

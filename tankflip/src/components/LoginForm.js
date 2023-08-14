@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 function LoginForm({ onLogin, userType }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -12,7 +12,7 @@ function LoginForm({ onLogin, userType }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2>Login</h2>
+      <h1>Login</h1>
       <input
         type="email"
         placeholder="Email"
