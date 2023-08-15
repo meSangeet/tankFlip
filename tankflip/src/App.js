@@ -4,7 +4,7 @@ import BuyerLoginPage from './pages/BuyerLoginPage';
 import SellerLoginPage from './pages/SellerLoginPage';
 import BuyerRegisterPage from './pages/BuyerRegisterPage';
 import SellerRegisterPage from './pages/SellerRegisterPage';
-
+import BuyerHomePage from './pages/BuyerHomePage';
 function App() {
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [userType, setUserType] = useState(null);
@@ -28,8 +28,9 @@ function App() {
           <Route path="/seller/login" element={<SellerLoginPage onLogin={handleLogin} />} />
           <Route path="/buyer/register" element={<BuyerRegisterPage onRegister={handleRegister} />} />
           <Route path="/seller/register" element={<SellerRegisterPage onRegister={handleRegister} />} />
+          <Route path="/buyer/home" element={<BuyerHomePage />} />
         </Routes>
-        
+
         {loggedInUser && userType === 'buyer' && (
           <div>
             <h2>Welcome, Buyer {loggedInUser}!</h2>
